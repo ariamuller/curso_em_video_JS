@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+    <style>
+        body {
+            background-image: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+        }
+        h1{
+            font: normal 20pt Arial;
+        }
+        #res {
+            font: normal 18pt Arial;
+            color: white;
+        }
+        #txtnac {
+            font: normal 20pt Arial ;
+        }
+        p {
+            font: normal 20pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>QUAL SUA NACIONALIDADE?</h1>
+    <p>Qual seu pais?</p> <input type="text" name="txtnac" id="txtnac">
+    <input type="button" value="verificar" onclick="analisar()">
+    <div id="res">
+
+    </div>
+    <script>
+        function analisar() {
+            var txtnac = window.document.querySelector("input#txtnac")
+            var res = window.document.querySelector('div#res')
+            var pais = String(txtnac.value)
+            res.innerHTML = `<p>Seu país atual é <strong> ${pais.toUpperCase()}</strong></p>`
+            if (pais == "brasil"){
+                res.innerHTML += 'VOCÊ É BRASILEIRO!'
+            }else {
+                res.innerHTML += 'VOCE É ESTRANGEIRO!'
+            }
+            res.innerHTML += `<p>É UM PRAZER</p>`
+        }
+
+    </script>
+</body>
+</html>

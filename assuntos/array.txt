@@ -1,0 +1,19 @@
+let a = []
+a -> array vetor
+[] -> elemento 
+[  ,   ,  ] -> conteúdo valor
+ 0   1   2 -> indice chave
+
+
+DECLARAR OBJETOS
+atributo nome com valor josé
+
+let amigo = {
+    nome: 'José',
+    sexo: 'M',
+    peso: 85.4,
+    engordar(p){
+        podem guardar funções - métodos
+    }
+}
+

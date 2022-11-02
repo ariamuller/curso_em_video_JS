@@ -1,0 +1,166 @@
+|| CURSO JAVASCRIPT ||
+
+BIBLIOGRAFIA:
+
+javascript guia definitivo 
+javascript guia do programador
+
+|| MANIPULAÇÃO DE DADOS JAVASCRIPT ||
+
+window.prompt ("abre janela para digitar dentro")
+
+var nome = window.prompt("Qual é seu nome?")
+window.alert("É um grande prazer em te conhecer, " + nome)
+
+Number.parseInt(n) ex: 5 - converte para inteiro 
+Number.parseFloat(n) ex: 5.5 floating point - converte para real
+Number(n) - reconhece qualquer tipo (real e inteiro)
+
+String(n) 
+n.toString() 
+
+|| TEMPLATE STRING ||
+`eu estou aprendendo ${js}`
+
+s.length -> quantos caracteres a string tem 
+s.toUpperCase() -> transformar em letras maiusculas
+s.toLowerCase() -> transformar em letras minusculas
+
+|| FORMATANDO NUMEROS ||
+
+var n1= 1543.5
+n1.toFixed(2) -> coloca duas casas decimais
+n1.toFixed(2).replace("." , ",") -> troca o ponto pela virgula
+n1.toLocaleString('pt-BR',{style: 'currency', currency: 'BRL'}) -> R$ 1,545.50
+
+|| OPERADORES JS ||
+
+|| RELACIONAIS ||
+> , < , >= , <= , == , !=
+
+|| LOGICOS ||
+! NEGAÇÃO -> unário !true = false (contrário)
+&& CONJUNÇÃO -> binário true&&true = false (só satisfaz se as duas forem verdadeiras)
+|| DISJUNÇÃO -> binário false||false = false (é falso quando todos forem falso)
+
+|| TERNARIOS ||
+teste ? true : false
+media >= 7.0 ? "aprovado" : "reprovado" 
+
+|| DOM -> DOCUMENT OBJECT MODEL ||
+conjunto de objetos dentro do navegador que vai dar acesso aos componentes internos do website
+esta presente quando estamos rodando o javascript dentro do navegador 
+
+|| ÁRVORE DOM || 
+tudo dentro do javascript está dentro de um objeto chamado window;
+dentro da window existem vários outros objetos ex: location(URL), document(documento atual), history(guarda da onde vc veio e pra onde vc vai);
+html -> head e body (são child do html);
+o html é um pai/parent de head e body;
+é uma arvore hierárquica;
+elemento é tudo que aparece na arvore DOM
+
+-> SELECIONANDO ELEMENTOS <- 
+por Marca -> getElementsByTagName() consigo selecionar mais de um objeto
+por ID -> getElementById()
+por Nome -> getElementsByName()
+por Classe -> getElementByClassName()
+por Seletor -> querySelector() querySelectorAll() 
+class . | id #
+
+|| EVENTOS DOM ||
+é tudo aquilo que possa acontecer com qualquer elemento 
+-> eventos de mouse 
+(mouseenter)
+(mousemove)
+(mousedown)
+(mouseup)
+(click)
+(mouseout)
+javascript dom events list 
+
+|| FUNÇÕES || 
+function ação (parametros) { 
+    
+} 
+
+|| CONDIÇÕES || 
+
+tipos de condição 
+
+-> condição 
+if (condição) {
+    true
+} else {
+    false
+}
+
+|| condição simples ||
+
+if (condição) {
+    true
+}
+
+|| CONDIÇÕES ANINHADAS 
+uma condição dentro da outra 
+
+if(cond1){
+    bloco1
+}else {
+    if(cond2){
+        bloco2
+    }else{
+        
+    }
+}
+
+|| CONDIÇÃO MULTIPLA ||
+uma expressão testa vários valores e depois volta pro fluxo normal do programa 
+ótima para situções pontuais e específicas
+
+switch (expressão) {
+    case valor1:
+        bloco
+        break
+    case valor2:
+        bloco
+        break
+    case valor3:
+        bloco
+        break
+    default:
+        bloco
+        break
+}
+
+SÓ FUNCIONA COM NUMEROS INTEIROS E CARACTERES 
+
+|| ESTRUTURAS DE REPETIÇÃO ||
+
+while (condição) {
+    bloco
+}
+
+function comerPizza () {
+    while(temFatia ()) {
+        comerFatia()
+    }
+}
+
+do {
+    bloco
+} while(condição)
+
+-> estrutura de repetição com variável de controle 
+
+for (inicio ; teste ; incr) {
+    bloco 
+}
+
+for(cont=1 ; cont <= 10 ; cont++) {
+    console.log(`Passo ${cont}`);
+} 
+
+-> variáveis simples só conseguem armazenar um valor por vez
+
+-> variáveis compostas devem ser capazes de armazenar vários
+valores em uma mesma estrutura [5,8,12,50]
